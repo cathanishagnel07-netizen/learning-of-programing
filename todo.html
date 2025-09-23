@@ -148,7 +148,7 @@
     const filters = document.querySelectorAll('.filters button');
     const clearAllBtn = document.getElementById('clear-all');
 
-    // Load from localStorage
+    
     let tasks = JSON.parse(localStorage.getItem('tasks') || '[]');
     let currentFilter = "all";
 
@@ -176,7 +176,7 @@
           render();
         });
 
-        // Edit on double click
+        
         span.addEventListener('dblclick', () => {
           const inputEdit = document.createElement('input');
           inputEdit.type = 'text';
@@ -215,7 +215,7 @@
         list.appendChild(li);
       });
 
-      // Update task counter
+      // 
       let activeCount = tasks.filter(t => !t.done).length;
       taskCount.textContent = `${activeCount} task${activeCount !== 1 ? 's' : ''} left`;
     }
